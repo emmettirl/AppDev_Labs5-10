@@ -16,4 +16,7 @@ public class PetEntity {
     private String animalType;
     private String breed;
     private int age;
+
+    @ManyToOne
+    private HouseholdEntity household;
 }

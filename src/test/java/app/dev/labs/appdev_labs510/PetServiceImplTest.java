@@ -40,8 +40,6 @@ class PetServiceImplTest {
         pet.setBreed("Golden Retriever");
         pet.setAge(5);
 
-
-
         when(petRepository.save(pet)).thenReturn(pet);
 
 
@@ -110,10 +108,6 @@ class PetServiceImplTest {
         verify(petRepository, times(1)).findById(1L);
     }
 
-    @Test
-    void testUpdatePetDetails() {
-
-    }
 
     @Test
     void testDeletePetById() {
@@ -131,8 +125,5 @@ class PetServiceImplTest {
         } catch (RecordNotFoundException e) {
             assertEquals("Pet not found with id: 1", e.getMessage());
         }
-
-
     }
-
 }
