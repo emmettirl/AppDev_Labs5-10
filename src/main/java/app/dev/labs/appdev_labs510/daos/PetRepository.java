@@ -1,9 +1,7 @@
-package app.dev.labs.appdev_labs510.repositories;
+package app.dev.labs.appdev_labs510.daos;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
 import app.dev.labs.appdev_labs510.entities.PetEntity;
-import app.dev.labs.appdev_labs510.records.PetNameAndBreed;
-import app.dev.labs.appdev_labs510.records.PetStatistics;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

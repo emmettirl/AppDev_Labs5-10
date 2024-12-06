@@ -2,7 +2,7 @@ package app.dev.labs.appdev_labs510;
 
 import app.dev.labs.appdev_labs510.entities.PetEntity;
 import app.dev.labs.appdev_labs510.exceptions.RecordNotFoundException;
-import app.dev.labs.appdev_labs510.repositories.PetRepository;
+import app.dev.labs.appdev_labs510.daos.PetRepository;
 import app.dev.labs.appdev_labs510.services.PetServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,3 +1,18 @@
+INSERT INTO users (email, password, first_name, last_name, role, enabled, account_non_expired, credentials_non_expired, account_non_locked)
+VALUES ('alice.wonderland@example.com', '{bcrypt}$2a$10$jPOV8aXOKupAi7UCJVvMaeEzBXjjLEblskQkB3ZAtNww2ATQjp8QK', 'Alice', 'Wonderland', 'ROLE_ADMIN', TRUE, TRUE, TRUE, TRUE);
+
+INSERT INTO users (email, password, first_name, last_name, role, enabled, account_non_expired, credentials_non_expired, account_non_locked)
+VALUES ('bob.builder@example.com', '{bcrypt}$2a$10$jPOV8aXOKupAi7UCJVvMaeEzBXjjLEblskQkB3ZAtNww2ATQjp8QK', 'Bob', 'Builder', 'ROLE_API', TRUE, TRUE, TRUE, TRUE);
+
+INSERT INTO users (email, password, first_name, last_name, role, enabled, account_non_expired, credentials_non_expired, account_non_locked)
+VALUES ('charlie.brown@example.com', '{bcrypt}$2a$10$jPOV8aXOKupAi7UCJVvMaeEzBXjjLEblskQkB3ZAtNww2ATQjp8QK', 'Charlie', 'Brown', 'ROLE_USER', TRUE, TRUE, TRUE, TRUE);
+
+INSERT INTO users (email, password, first_name, last_name, role, enabled, account_non_expired, credentials_non_expired, account_non_locked)
+VALUES ('diana.prince@example.com', '{bcrypt}$2a$10$jPOV8aXOKupAi7UCJVvMaeEzBXjjLEblskQkB3ZAtNww2ATQjp8QK', 'Diana', 'Prince', 'ROLE_USER', TRUE, TRUE, TRUE, TRUE);
+
+INSERT INTO users (email, password, first_name, last_name, role, enabled, account_non_expired, credentials_non_expired, account_non_locked)
+VALUES ('edward.snow@example.com', '{bcrypt}$2a$10$jPOV8aXOKupAi7UCJVvMaeEzBXjjLEblskQkB3ZAtNww2ATQjp8QK', 'Edward', 'Snow', 'ROLE_ADMIN', TRUE, TRUE, TRUE, FALSE);
+
 INSERT INTO households (eircode, number_of_occupants, max_number_of_occupants, owner_occupied) VALUES
     ('D02XY45', 3, 5, 1),
     ('A94B6F3', 4, 6, 0),

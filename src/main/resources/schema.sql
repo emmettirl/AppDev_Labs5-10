@@ -16,3 +16,14 @@ CREATE TABLE pets (
     FOREIGN KEY (household) REFERENCES households(eircode)
 );
 
+CREATE TABLE users (
+     email VARCHAR(255) PRIMARY KEY,
+     password VARCHAR(255) NOT NULL,
+     first_name VARCHAR(255) NOT NULL,
+     last_name VARCHAR(255) NOT NULL,
+     role VARCHAR(255) NOT NULL,
+     enabled BOOLEAN DEFAULT TRUE,
+     account_non_expired BOOLEAN DEFAULT TRUE,
+     credentials_non_expired BOOLEAN DEFAULT TRUE,
+     account_non_locked BOOLEAN DEFAULT TRUE
+);

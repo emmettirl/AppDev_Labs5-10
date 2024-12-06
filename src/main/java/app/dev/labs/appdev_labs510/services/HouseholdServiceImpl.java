@@ -1,10 +1,8 @@
 package app.dev.labs.appdev_labs510.services;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
-import app.dev.labs.appdev_labs510.entities.PetEntity;
-import app.dev.labs.appdev_labs510.exceptions.BadDataException;
-import app.dev.labs.appdev_labs510.repositories.HouseholdRepository;
-import app.dev.labs.appdev_labs510.repositories.PetRepository;
+import app.dev.labs.appdev_labs510.daos.HouseholdRepository;
+import app.dev.labs.appdev_labs510.daos.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

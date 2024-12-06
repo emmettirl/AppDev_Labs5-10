@@ -1,4 +1,4 @@
-package app.dev.labs.appdev_labs510.repositories;
+package app.dev.labs.appdev_labs510.daos;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

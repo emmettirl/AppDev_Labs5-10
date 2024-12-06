@@ -1,7 +1,7 @@
 package app.dev.labs.appdev_labs510;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
-import app.dev.labs.appdev_labs510.repositories.HouseholdRepository;
+import app.dev.labs.appdev_labs510.daos.HouseholdRepository;
 import app.dev.labs.appdev_labs510.services.HouseholdServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
