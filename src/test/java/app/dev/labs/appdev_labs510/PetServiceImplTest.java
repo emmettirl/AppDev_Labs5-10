@@ -2,8 +2,6 @@ package app.dev.labs.appdev_labs510;
 
 import app.dev.labs.appdev_labs510.entities.PetEntity;
 import app.dev.labs.appdev_labs510.exceptions.RecordNotFoundException;
-import app.dev.labs.appdev_labs510.records.PetNameAndBreed;
-import app.dev.labs.appdev_labs510.records.PetStatistics;
 import app.dev.labs.appdev_labs510.repositories.PetRepository;
 import app.dev.labs.appdev_labs510.services.PetServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -61,7 +59,7 @@ class PetServiceImplTest {
     }
 
     @Test
-    void testReadAllPets() {
+    void testGetAllPets() {
         PetEntity pet1 = new PetEntity();
         pet1.setName("Buddy");
         pet1.setAnimalType("Dog");
@@ -76,7 +74,7 @@ class PetServiceImplTest {
 
         when(petRepository.findAll()).thenReturn(Arrays.asList(pet1, pet2));
 
-        List<PetEntity> pets = petService.readAllPets();
+        List<PetEntity> pets = petService.getAllPets();
 
         assertNotNull(pets);
         assertEquals(2, pets.size());
@@ -86,7 +84,7 @@ class PetServiceImplTest {
     }
 
     @Test
-    void testReadPetById() {
+    void testGetPetById() {
         PetEntity pet = new PetEntity();
         pet.setId(1L);
         pet.setName("Buddy");
@@ -96,7 +94,7 @@ class PetServiceImplTest {
 
         when(petRepository.findById(1L)).thenReturn(Optional.of(pet));
 
-        PetEntity foundPet = petService.readPetById(1L);
+        PetEntity foundPet = petService.getPetById(1L);
 
         assertNotNull(foundPet);
         assertEquals(1L, foundPet.getId());

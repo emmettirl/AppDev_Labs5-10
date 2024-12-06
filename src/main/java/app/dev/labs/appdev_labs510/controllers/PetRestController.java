@@ -21,7 +21,7 @@ public class PetRestController {
 
     @GetMapping("/pets/{id}")
     public PetEntity getPetById(@PathVariable Long id){
-        return petService.readPetById(id);
+        return petService.getPetById(id);
     }
 
     @DeleteMapping("/pets/delete/{id}")
@@ -59,7 +59,7 @@ public class PetRestController {
             @RequestParam (required = false) Integer age,
             @RequestParam (required = false) String household
     ){
-        PetEntity originalPet = petService.readPetById(id);
+        PetEntity originalPet = petService.getPetById(id);
         PetEntity newPet = new PetEntity();
 
         newPet.setName(name == null ? originalPet.getName() : name);

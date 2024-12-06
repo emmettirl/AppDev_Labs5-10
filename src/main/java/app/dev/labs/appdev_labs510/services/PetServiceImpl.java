@@ -28,12 +28,12 @@ public class PetServiceImpl implements PetService {
     }
 
     @Override
-    public List<PetEntity> readAllPets() {
+    public List<PetEntity> getAllPets() {
         return petRepository.findAll();
     }
 
     @Override
-    public PetEntity readPetById(Long id) {
+    public PetEntity getPetById(Long id) {
         return petRepository.findById(id).orElse(null);
     }
 

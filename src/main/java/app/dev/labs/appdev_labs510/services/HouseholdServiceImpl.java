@@ -1,6 +1,8 @@
 package app.dev.labs.appdev_labs510.services;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
+import app.dev.labs.appdev_labs510.entities.PetEntity;
+import app.dev.labs.appdev_labs510.exceptions.BadDataException;
 import app.dev.labs.appdev_labs510.repositories.HouseholdRepository;
 import app.dev.labs.appdev_labs510.repositories.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +41,11 @@ public class HouseholdServiceImpl implements HouseholdService {
     @Override
     public List<HouseholdEntity> GetHouseholds() {
         return householdRepository.findAll();
+    }
+
+    @Override
+    public HouseholdEntity createHousehold(HouseholdEntity household) {
+        return householdRepository.save(household);
     }
 
 }

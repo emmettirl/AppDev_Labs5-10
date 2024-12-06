@@ -12,4 +12,6 @@ public interface HouseholdService {
     List<HouseholdEntity> FindAllHouseholdsNoPets();
 
     List<HouseholdEntity> GetHouseholds();
+
+    HouseholdEntity createHousehold(HouseholdEntity household);
 }

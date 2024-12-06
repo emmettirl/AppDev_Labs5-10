@@ -1,10 +1,8 @@
 package app.dev.labs.appdev_labs510.services;
 
-import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
 import app.dev.labs.appdev_labs510.entities.PetEntity;
 import app.dev.labs.appdev_labs510.records.PetNameAndBreed;
 import app.dev.labs.appdev_labs510.records.PetStatistics;
-import app.dev.labs.appdev_labs510.repositories.PetRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,9 +12,9 @@ import java.util.List;
 public interface PetService {
     PetEntity createPet(PetEntity pet);
 
-    List<PetEntity> readAllPets();
+    List<PetEntity> getAllPets();
 
-    PetEntity readPetById(Long id);
+    PetEntity getPetById(Long id);
 
     PetEntity updatePetDetails(Long id, PetEntity pet);
 
