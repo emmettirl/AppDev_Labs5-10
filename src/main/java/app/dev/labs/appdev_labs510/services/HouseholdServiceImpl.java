@@ -2,6 +2,7 @@ package app.dev.labs.appdev_labs510.services;
 
 import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
 import app.dev.labs.appdev_labs510.repositories.HouseholdRepository;
+import app.dev.labs.appdev_labs510.repositories.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,9 @@ import java.util.List;
 public class HouseholdServiceImpl implements HouseholdService {
     @Autowired
     HouseholdRepository householdRepository;
+
+    @Autowired
+    PetRepository petRepository;
 
     @Override
     public HouseholdEntity FindHouseholdById(String id) {
@@ -31,4 +35,10 @@ public class HouseholdServiceImpl implements HouseholdService {
     public List<HouseholdEntity> FindAllHouseholdsNoPets() {
         return householdRepository.findHouseholdsWithNoPets();
     }
+
+    @Override
+    public List<HouseholdEntity> GetHouseholds() {
+        return householdRepository.findAll();
+    }
+
 }

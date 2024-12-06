@@ -1,5 +1,6 @@
 package app.dev.labs.appdev_labs510.services;
 
+import app.dev.labs.appdev_labs510.entities.HouseholdEntity;
 import app.dev.labs.appdev_labs510.entities.PetEntity;
 import app.dev.labs.appdev_labs510.exceptions.BadDataException;
 import app.dev.labs.appdev_labs510.exceptions.RecordNotFoundException;
@@ -88,4 +89,10 @@ public class PetServiceImpl implements PetService {
         int oldestAge = pets.stream().mapToInt(PetEntity::getAge).max().orElse(0);
         return new PetStatistics(averageAge, oldestAge);
     }
+
+    @Override
+    public List<PetEntity> GetPets() {
+        return petRepository.findAll();
+    }
+
 }

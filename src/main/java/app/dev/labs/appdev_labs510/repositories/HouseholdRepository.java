@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface HouseholdRepository extends JpaRepository<HouseholdEntity, String> {
-    @Query("SELECT h FROM HouseholdEntity h WHERE h.listOfPets IS EMPTY")
+    @Query("SELECT h FROM HouseholdEntity h LEFT JOIN h.listOfPets p WHERE p IS NULL")
     List<HouseholdEntity> findHouseholdsWithNoPets();
 }

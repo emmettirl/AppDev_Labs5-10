@@ -2,7 +2,7 @@ CREATE TABLE households (
     eircode VARCHAR(8) PRIMARY KEY,
     number_of_occupants INT NOT NULL,
     max_number_of_occupants INT NOT NULL,
-    owner_occupied BIT NOT NULL
+    owner_occupied BOOLEAN NOT NULL
 );
 
 

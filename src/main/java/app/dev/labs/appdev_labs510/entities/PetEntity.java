@@ -1,6 +1,6 @@
 package app.dev.labs.appdev_labs510.entities;
 
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,5 +18,7 @@ public class PetEntity {
     private int age;
 
     @ManyToOne
+    @JoinColumn(name = "household")
+    @JsonBackReference
     private HouseholdEntity household;
 }

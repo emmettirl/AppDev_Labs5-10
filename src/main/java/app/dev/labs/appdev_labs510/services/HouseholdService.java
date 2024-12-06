@@ -10,4 +10,6 @@ public interface HouseholdService {
     HouseholdEntity FindHouseholdById(String id);
     HouseholdEntity EagerFindHouseholdById(String id);
     List<HouseholdEntity> FindAllHouseholdsNoPets();
+
+    List<HouseholdEntity> GetHouseholds();
 }

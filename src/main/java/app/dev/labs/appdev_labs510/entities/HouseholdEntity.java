@@ -1,9 +1,7 @@
 package app.dev.labs.appdev_labs510.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -18,6 +16,7 @@ public class HouseholdEntity {
     private int maxNumberOfOccupants;
     private int OwnerOccupied;
 
-    @OneToMany(mappedBy = "household")
+    @OneToMany(mappedBy = "household", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<PetEntity> listOfPets;
 }
